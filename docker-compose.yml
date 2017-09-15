@@ -1,4 +1,4 @@
-version: '2'
+version: '3.3'
 services:
   mysql:
     image: mysql
@@ -28,8 +28,7 @@ services:
     restart: always
     volumes:
      - ./backups:/backups
-    volumes_from:
-     - wordpress
+     - wordpress_files:/var/www/html
     depends_on:
      - mysql
     environment:
