@@ -4,9 +4,13 @@ This is a docker-compose file that helps you getting up-and-running quickly with
 
 1. ```git clone git@github.com:angelo-v/wordpress-backup-quickstart.git my-blog```
 2. ```cd my-blog```
-3. ***Change the default passwords and db settings in example.env***
-4. ```mv example.env .env```
-5. ```docker-compose up -d```
+3. ```make up```
+
+On first run you will be asked for the database credentials and configuration. Those will be written to the file `.env` and used further on.
+
+## Docker stack deployment
+
+Run `make stack` to deploy a stack in swarm mode.
 
 ## Customization
 
