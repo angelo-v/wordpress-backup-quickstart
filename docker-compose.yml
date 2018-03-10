@@ -21,6 +21,9 @@ services:
      - "WORDPRESS_DB_NAME=$MYSQL_DATABASE"
      - "WORDPRESS_DB_USER=$MYSQL_USER"
      - "WORDPRESS_DB_PASSWORD=$MYSQL_PASSWORD"
+     - VIRTUAL_HOST
+     - LETSENCRYPT_HOST
+     - LETSENCRYPT_EMAIL
     volumes:
      - wordpress_files:/var/www/html
   backup:
